@@ -45,14 +45,12 @@ URLs de referencia:
 
 ## Integrantes del equipo (Grupo 5)
 
-| Integrante | Rol (Fase 1) |
-|------------|----------------|
+| Integrante | Rol |
+|------------|-----|
 | Sebastián Tralma | Hub web / API DevSecOps, Security Gates, CI, documentación |
+| Benjamín Hernández | *(completar rol)* |
 | Damián Valencia | Pulse (móvil) / integración Flutter |
 | *(completar)* | *(rol)* |
-| *(completar)* | *(rol)* |
-
-> Actualicen esta tabla con el resto del grupo y roles finales.
 
 ## Metodología de trabajo
 
@@ -82,11 +80,16 @@ URLs de referencia:
 
 ```
 Fase 1/
-  Evidencias_Grupales/      ← docs comunes, Jira, presentación, guías
-  Evidencias_Individuales/  ← autoevaluación y diario por integrante
+  Evidencias_Grupales/
+  Evidencias_Individuales/
+
+Fase 2/
+  Evidencias_Individuales/   ← diario 2.1 por integrante
+  Evidencias_Grupales/       ← guía 2.4, PPT de avance/presentación
+  Evidencias_Proyecto/       ← documentación, capturas app, BD + links al producto
 ```
 
-Fases siguientes (`Fase 2`, …) se agregarán con la misma lógica.
+Detalle Fase 2 → [Fase 2/README.md](./Fase%202/README.md)
 
 ## Licencia
 
