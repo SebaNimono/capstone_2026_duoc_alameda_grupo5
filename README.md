@@ -20,7 +20,7 @@ SSPILLOWY orquesta seguridad de software de punta a punta:
 - **Security Gate** con umbrales reales y check en CI (GitHub Actions)
 - Triaje humano (HITL), bypass CISO en el hub y trazabilidad (audit)
 - Consola web (React) + API (FastAPI) en producción
-- App móvil **Pulse** (Flutter) para alertas y bypass — trabajo del compañero en paralelo
+- App móvil **Pulse** (Flutter) para alertas y bypass — trabajo en paralelo
 
 ## Tecnologías
 
@@ -47,15 +47,14 @@ URLs de referencia:
 
 | Integrante | Rol |
 |------------|-----|
-| Sebastián Tralma | Hub web / API DevSecOps, Security Gates, CI, documentación |
-| Benjamín Hernández | *(completar rol)* |
-| Damián Valencia | Pulse (móvil) / integración Flutter |
-| *(completar)* | *(rol)* |
+| Sebastián Tralma | Líder de Proyecto / Hub Web & API DevSecOps, Security Gates, CI/CD, Documentación |
+| Benjamín Hernández | QA & Pruebas / Aseguramiento de Calidad y Automatización |
+| Pilar Valencia | App Móvil Pulse (Flutter) / Integración Móvil |
 
 ## Metodología de trabajo
 
 - **Scrum / Kanban** ligero por sprints de fase académica  
-- **DevSecOps**: gates en pipeline, evidencias en GitHub, seguimiento en **Jira** (enlace en evidencias grupales)  
+- **DevSecOps**: gates en pipeline, evidencias en GitHub, seguimiento en **Jira** y **Confluence** (enlaces y capturas en evidencias grupales y de proyecto)  
 - Separación Hub (web/API) ↔ Pulse (móvil), con contratos de API compartidos  
 
 ## Arquitectura (visión)
@@ -66,10 +65,10 @@ URLs de referencia:
                                       v
                               [ Hallazgos + Gate ]
                                       |
-              +----------------------+----------------------+
-              |                                             |
-       [ Consola Web Hub ]                          [ CI Security Gate ]
-       React / Vercel                               GitHub Actions
+              +-----------------------+-----------------------+
+              |                                               |
+       [ Consola Web Hub ]                           [ CI Security Gate ]
+       React / Vercel                                GitHub Actions
               |
        [ API FastAPI / Railway / Postgres ]
               |
@@ -80,16 +79,17 @@ URLs de referencia:
 
 ```
 Fase 1/
-  Evidencias_Grupales/
-  Evidencias_Individuales/
+  Evidencias_Individuales/   ← pautas 1.1 (competencias), 1.2 (diario) y 1.3 (autoevaluación)
+  Evidencias_Grupales/       ← guía Fase 1, documento técnico y presentación NABC
 
 Fase 2/
-  Evidencias_Individuales/   ← diario 2.1 por integrante
-  Evidencias_Grupales/       ← guía 2.4, PPT de avance/presentación
-  Evidencias_Proyecto/       ← documentación, capturas app, BD + links al producto
+  Evidencias_Individuales/   ← diario 2.1 y autoevaluación de avance 2.2 por integrante
+  Evidencias_Grupales/       ← guía 2.4, PPT de avance y presentación Fase 2
+  Evidencias_Proyecto/       ← documentación técnica, capturas del sistema, BD + links al producto
 ```
 
-Detalle Fase 2 → [Fase 2/README.md](./Fase%202/README.md)
+- Detalle Fase 1 → [Fase 1/README.md](./Fase%201/README.md)  
+- Detalle Fase 2 → [Fase 2/README.md](./Fase%202/README.md)
 
 ## Licencia
 
