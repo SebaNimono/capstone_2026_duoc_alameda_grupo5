@@ -1,15 +1,15 @@
-# Fase 1 — SSPILLOWY (Grupo 5)
+# Fase 1 — Definición y Diseño del Proyecto APT
 
-Evidencias de **Definición y Diseño del Proyecto APT** (Capstone 2026 — Duoc UC Sede Alameda).
+En esta carpeta organizo todas nuestras evidencias correspondientes a la **Fase 1 (Definición y Diseño de Proyecto APT)** de **SSPILLOWY**.
 
-## Estructura
+## Estructura de la Fase 1
 
 | Carpeta | Contenido |
-|---------|-----------|
-| [Evidencias_Individuales](./Evidencias_Individuales/) | Autoevaluación de competencias (`1.1`), Diario de reflexión (`1.2`) y Autoevaluación de Fase 1 (`1.3`) por integrante |
-| [Evidencias_Grupales](./Evidencias_Grupales/) | Guía del estudiante Fase 1 completada, Documento Técnico inicial y Presentación NABC |
+| --- | --- |
+| [Evidencias_Grupales](./Evidencias_Grupales/) | Guía del estudiante Fase 1 completada, documento técnico inicial de arquitectura y presentación NABC. |
+| [Evidencias_Individuales](./Evidencias_Individuales/) | Autoevaluación de competencias (`1.1`), Diario de reflexión (`1.2`) y Autoevaluación de definición del proyecto (`1.3`) de cada integrante. |
 
-## Enlaces de referencia
+## Enlaces del proyecto
 
-- Repositorio del producto: https://github.com/SebaNimono/sspillowy
-- Espacio Confluence / Resumen del proyecto: https://sebasckrack.atlassian.net/wiki/external/MTJkNDBkN2MxZmE2NDM1MjhjNTY2Nzc5NGM3YmYxZTg
+- **Repositorio Open Source (código fuente):** [https://github.com/SebaNimono/sspillowy](https://github.com/SebaNimono/sspillowy)
+- **Centro de documentación en Confluence:** [https://sebasckrack.atlassian.net/wiki/external/MTJkNDBkN2MxZmE2NDM1MjhjNTY2Nzc5NGM3YmYxZTg](https://sebasckrack.atlassian.net/wiki/external/MTJkNDBkN2MxZmE2NDM1MjhjNTY2Nzc5NGM3YmYxZTg)

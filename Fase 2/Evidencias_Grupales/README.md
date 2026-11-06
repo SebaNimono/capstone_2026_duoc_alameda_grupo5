@@ -1,20 +1,16 @@
 # Evidencias grupales — Fase 2
 
-Documentos compartidos del equipo.
+Aquí están nuestros documentos grupales de avance y las presentaciones de exposición de la **Fase 2** de **SSPILLOWY**.
+
+## Documentos incluidos
 
 | Archivo | Descripción |
-|---------|-------------|
-| `2.4_GuiaEstudiante_Fase2_SSPILLOWY_Completada.docx` | Guía estudiante Fase 2 (desarrollo del proyecto) — español |
-| `Avance_Proyecto_APT.pptx` | Presentación de avance del proyecto APT |
-| `Presentacion_Proyecto_SSPILLOWY_Fase2.pptx` | Presentación del proyecto SSPILLOWY (Fase 2) |
+| --- | --- |
+| `2.4_GuiaEstudiante_Fase2_SSPILLOWY_Completada.docx` | Guía del estudiante Fase 2 completada con el desarrollo de ingeniería, ajustes aplicados, arquitectura y evidencias del sistema. |
+| `Avance_Proyecto_APT.pptx` | Presentación de avance del proyecto APT. |
+| `Presentacion_Proyecto_SSPILLOWY_Fase2.pptx` | Presentación ejecutiva y técnica de la Fase 2 de SSPILLOWY. |
 
-## Pendiente / optativo
+## Enlaces directos
 
-- `2.4_GuiaEstudiante_Fase 2_DesarrolloProyecto APT (Inglés).docx` — optativo
-- `2.6_GuiaEstudiante_Fase 2_Informe Final Proyecto APT (Español).docx`
-- `2.6_... (Inglés).docx` — optativo
-
-## Enlaces de seguimiento
-
-- Jira / Confluence: ver capturas en [Evidencias_Proyecto/Sistema/Aplicacion](../Evidencias_Proyecto/Sistema/Aplicacion/)
-- Código: https://github.com/SebaNimono/sspillowy
+- **Evidencias técnicas, Ágiles y de Observabilidad:** [../Evidencias_Proyecto/](../Evidencias_Proyecto/)
+- **Repositorio Open Source del producto:** [https://github.com/SebaNimono/sspillowy](https://github.com/SebaNimono/sspillowy)

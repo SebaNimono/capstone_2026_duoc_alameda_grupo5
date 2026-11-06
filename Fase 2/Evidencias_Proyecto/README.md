@@ -1,50 +1,33 @@
-# Evidencias del proyecto — Fase 2
+# Evidencias del Proyecto — Fase 2 (SSPILLOWY)
 
-Evidencias de **documentación**, **aplicación** y **base de datos** del producto SSPILLOWY, con enlaces al sistema en producción y al código.
+Aquí organizo toda la evidencia técnica, metodológica (Ágil en Jira y Confluence), de base de datos, de sistema en producción y de **Observabilidad** de **SSPILLOWY**.
 
-## Enlaces al producto (SSPILLOWY)
+## Enlaces al producto Open Source
 
 | Recurso | URL |
-|---------|-----|
-| Código (monorepo) | https://github.com/SebaNimono/sspillowy |
-| Consola web | https://sspillowy.com |
-| API | https://api.sspillowy.com |
-| Health API | https://api.sspillowy.com/health |
-| CI Security Gate | https://github.com/SebaNimono/sspillowy/blob/main/.github/workflows/security-gate.yml |
+| --- | --- |
+| **Repositorio Open Source (MIT)** | [https://github.com/SebaNimono/sspillowy](https://github.com/SebaNimono/sspillowy) |
+| **Consola Web Hub** | [https://sspillowy.com](https://sspillowy.com) |
+| **API REST** | [https://api.sspillowy.com](https://api.sspillowy.com) |
+| **Health Check (Observabilidad)** | [https://api.sspillowy.com/health](https://api.sspillowy.com/health) |
+| **Workflow CI Security Gate** | [https://github.com/SebaNimono/sspillowy/blob/main/.github/workflows/security-gate.yml](https://github.com/SebaNimono/sspillowy/blob/main/.github/workflows/security-gate.yml) |
 
-Stack: React/Vite (Vercel) · FastAPI (Railway) · PostgreSQL · Semgrep / GitLeaks / Trivy / ZAP.
+## Estructura de esta carpeta
 
-## Contenido de esta carpeta
-
-```
+```text
 Evidencias_Proyecto/
-├── Documentacion/          ← diccionario de datos, documento técnico
+├── Documentacion/          ← Documento técnico y diccionario de datos general
+├── Version_Agil/           ← Product Vision, Product Backlog (Jira), Sprints, DoD y Confluence
+├── Observabilidad/         ← Monitoreo post-despliegue, métricas Prometheus/Grafana y SLOs
 └── Sistema/
-    ├── Aplicacion/         ← capturas del hub y herramientas
-    └── Base_de_datos/      ← diccionario / esquema PostgreSQL
+    ├── Aplicacion/         ← Capturas del Hub en producción, tablero Jira y espacio Confluence
+    └── Base_de_datos/      ← Diccionario de datos y esquema PostgreSQL (22 tablas)
 ```
 
-### Documentación
-
-- `Documentacion/SSPILLOWY_Documento_Tecnico.docx`
-- `Documentacion/06_Diccionario_Datos_SSPILLOWY.docx`
-
-### Sistema — Aplicación
-
-Capturas del hub en uso:
-
-| Archivo | Qué muestra |
-|---------|-------------|
-| `01_dashboard.png` | Dashboard / Risk Posture |
-| `02_repositorios.png` | Repositorios monitoreados |
-| `03_security_gates.png` | Security Gates & reglas CI/CD |
-| `04_jira_backlog.png` | Backlog en Jira |
-| `05_confluence_espacio.png` | Espacio Confluence del proyecto |
-
-### Sistema — Base de datos
-
-- `Base_de_datos/06_Diccionario_Datos_SSPILLOWY.docx` — diccionario de datos PostgreSQL (Railway)
-
-## Presentación
-
-Las PPT de avance/exposición están en [Evidencias_Grupales](../Evidencias_Grupales/) (`Avance_Proyecto_APT.pptx` y `Presentacion_Proyecto_SSPILLOWY_Fase2.pptx`).
+| Subcarpeta | Qué contiene |
+| --- | --- |
+| [Documentacion](./Documentacion/) | `SSPILLOWY_Documento_Tecnico.docx` y `06_Diccionario_Datos_SSPILLOWY.docx`. |
+| [Version_Agil](./Version_Agil/) | Artefactos de nuestra metodología Ágil (Scrum) gestionados en **Jira** y **Confluence**: Visión del Producto, Product Backlog, Sprint Backlog, Definition of Done y estructura documental. |
+| [Observabilidad](./Observabilidad/) | Evidencias de observabilidad continua una vez desplegado el proyecto: métricas operativas, estado de componentes, latencias de escaneo y alertas. |
+| [Sistema/Aplicacion](./Sistema/Aplicacion/) | Capturas reales de la aplicación web, repositorios monitoreados, Security Gates, Jira y Confluence. |
+| [Sistema/Base_de_datos](./Sistema/Base_de_datos/) | Especificación y diccionario de datos del modelo relacional en PostgreSQL 16. |

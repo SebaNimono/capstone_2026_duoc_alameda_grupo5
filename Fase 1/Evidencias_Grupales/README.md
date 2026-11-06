@@ -1,14 +1,18 @@
 # Evidencias grupales — Fase 1
 
-Documentos compartidos del equipo correspondientes a la **Fase 1 (Definición y Diseño de Proyecto APT)**.
+Aquí están los entregables grupales que desarrollamos en la **Fase 1** para definir el alcance, la propuesta de valor y la arquitectura inicial de **SSPILLOWY**.
+
+## Documentos incluidos
 
 | Archivo | Descripción |
-|---------|-------------|
-| `GuiaEstudiante_Fase1_SSPILLOWY_Completada.docx` | Guía del estudiante Fase 1 completada (Definición del proyecto SSPILLOWY) |
-| `SSPILLOWY_Documento_Tecnico.docx` | Documento técnico de arquitectura y diseño del sistema |
-| `SSPILLOWY_NABC_completo.pptx` | Presentación ejecutiva bajo metodología NABC (Need, Approach, Benefits, Competition) |
+| --- | --- |
+| `GuiaEstudiante_Fase1_SSPILLOWY_Completada.docx` | Guía de definición del proyecto APT completada con objetivos, alcance, factibilidad y planificación inicial. |
+| `SSPILLOWY_Documento_Tecnico.docx` | Especificación técnica inicial de la plataforma DevSecOps, motores de análisis y modelo de datos. |
+| `SSPILLOWY_NABC_completo.pptx` | Presentación del proyecto bajo metodología NABC (*Need, Approach, Benefits, Competition*). |
 
-## Enlaces de seguimiento
+## Gestión y documentación en Confluence / Jira
 
-- Resumen del proyecto en Confluence / Jira: https://sebasckrack.atlassian.net/wiki/external/MTJkNDBkN2MxZmE2NDM1MjhjNTY2Nzc5NGM3YmYxZTg
-- Código del producto: https://github.com/SebaNimono/sspillowy
+Nuestro espacio de documentación continua del proyecto vive en Confluence:
+- **Enlace directo a Confluence:** [https://sebasckrack.atlassian.net/wiki/external/MTJkNDBkN2MxZmE2NDM1MjhjNTY2Nzc5NGM3YmYxZTg](https://sebasckrack.atlassian.net/wiki/external/MTJkNDBkN2MxZmE2NDM1MjhjNTY2Nzc5NGM3YmYxZTg)
+
+> **[Imagen de portada del espacio Confluence de SSPILLOWY]**
