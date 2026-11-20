@@ -1,34 +1,47 @@
-# Sistema — Evidencias de la Aplicación, Jira y Confluence
+# Evidencias de Sistema — Aplicación y Contenedores Docker
 
-Aquí guardo las capturas del sistema **SSPILLOWY** operando en producción (`https://sspillowy.com`), junto con las vistas de nuestra gestión en **Jira** y **Confluence**.
+En esta carpeta se presentan las evidencias de despliegue en contenedores **Docker**, especificación de arquitectura y diagramas **UML** de la plataforma **SSPILLOWY**.
 
-## Capturas actuales en esta carpeta
+---
 
-| Archivo | Qué muestra |
-| --- | --- |
-| `01_dashboard.png` | Consola principal y postura de riesgo (*Risk Posture*) en tiempo real. |
-| `02_repositorios.png` | Gestión de repositorios monitoreados y perfiles de escaneo multi-motor. |
-| `03_security_gates.png` | Políticas de *Security Gate*, umbrales de bloqueo para CI/CD y flujo de excepciones (*bypass*). |
-| `04_jira_backlog.png` | Tablero y *Backlog* del proyecto en Jira Software. |
-| `05_confluence_espacio.png` | Espacio de documentación técnica del proyecto en Confluence. |
-| `06_confluence_indice.png` | Árbol completo del Centro de Documentación en Confluence (`00. Inicio e índice` a `10. Desarrollo final`). |
-| `07_jira_sprint1_epicas.png` | Vista de las 4 Épicas y el `Sprint 1 - MVP & Vertical Slice` (`SSPIL-1` a `SSPIL-12`) en Jira. |
-| `08_jira_product_backlog.png` | Vista del *Product Backlog* en Jira (`SSPIL-17` a `SSPIL-61`). |
+## 1. Despliegue en Contenedores Docker
 
-## Vista previa de las evidencias
+La plataforma está diseñada para ejecutarse de forma reproducible y aislada mediante contenedores Docker:
 
-### 1. Consola Web Hub en producción
-- **Dashboard / Risk Posture:**
-  ![Dashboard SSPILLOWY](./01_dashboard.png)
-- **Repositorios monitoreados:**
-  ![Repositorios SSPILLOWY](./02_repositorios.png)
-- **Security Gates & Reglas CI/CD:**
-  ![Security Gates SSPILLOWY](./03_security_gates.png)
+- **`Dockerfile`:** Imagen optimizada en `python:3.12-slim` que instala y ejecuta las herramientas de seguridad nativas en Linux (**Semgrep**, **GitLeaks** y **Trivy**), creando un usuario no privilegiado (`appuser`) y exponiendo health checks activos en `/health`.
+- **`docker-compose.yml`:** Orquestación completa de los servicios:
+  - `sspillowy_api`: API FastAPI con recarga en vivo y orquestación multi-motor.
+  - `sspillowy_postgres`: Motor de base de datos relacional PostgreSQL 16 con volumen persistente.
+  - `sspillowy_redis`: Servicio en memoria para colas de trabajo asíncronas y caché.
 
-### 2. Gestión Ágil en Jira y Documentación en Confluence
-- **Índice del Centro de Documentación en Confluence (`00` a `10`):**
-  ![Índice Confluence](./06_confluence_indice.png)
-- **Épicas y Sprint 1 en Jira (`SSPIL-1` a `SSPIL-12`):**
-  ![Sprint 1 y Épicas en Jira](./07_jira_sprint1_epicas.png)
-- **Product Backlog en Jira (`SSPIL-17` a `SSPIL-61`):**
-  ![Product Backlog en Jira](./08_jira_product_backlog.png)
+### Comandos de ejecución local con Docker
+```bash
+# Iniciar todos los servicios en segundo plano
+docker compose up -d
+
+# Verificar el estado de los contenedores
+docker compose ps
+
+# Comprobar la salud de la API
+curl http://localhost:8000/health
+```
+
+---
+
+## 2. Diagramas UML de Arquitectura y Clases
+
+Los diagramas formales de modelado de software se encuentran detallados en:
+👉 [Diagrama_UML_Arquitectura.md](./Diagrama_UML_Arquitectura.md)
+
+Incluye:
+1. **Diagrama de Componentes UML:** Interacción entre Web Hub (React), Pulse (Flutter), API Gateway (FastAPI), Contenedores de escaneo y PostgreSQL.
+2. **Diagrama de Clases UML:** Modelado de entidades del dominio (`Workspace`, `Repository`, `Scan`, `Finding`, `SecurityGatePolicy`, `GateBypassRequest`).
+3. **Diagrama de Secuencia UML:** Flujo automatizado de evaluación de Security Gates en CI/CD y aprobación de bypass biométrico desde la app móvil.
+
+---
+
+## 3. Acceso a la Aplicación en Producción
+
+- **Consola Web Hub:** [https://sspillowy.com](https://sspillowy.com)
+- **API REST & Health Check:** [https://api.sspillowy.com/health](https://api.sspillowy.com/health)
+- **Repositorio Monorepo:** [https://github.com/SebaNimono/sspillowy](https://github.com/SebaNimono/sspillowy)

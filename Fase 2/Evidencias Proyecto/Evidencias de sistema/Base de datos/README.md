@@ -1,15 +1,23 @@
 # Evidencias de Sistema — Base de Datos (PostgreSQL 16)
 
-En esta carpeta se documenta el esquema relacional, persistencia y diccionario de datos de **SSPILLOWY**, alojado en **PostgreSQL 16** (Railway / Supabase).
+En esta carpeta se documenta el esquema relacional, persistencia, diagrama Entidad-Relación (**DER**) y diccionario de datos de **SSPILLOWY**, operando sobre **PostgreSQL 16** (Supabase / Railway).
 
-## Documento del Modelo de Datos
+---
 
-El documento formal con el diccionario de datos completo de las 22 tablas, 245 columnas, claves foráneas e índices se encuentra centralizado en:
-👉 `../Evidencias de documentación/Modelo de datos.docx`
+## 1. Documentos y Archivos en esta Carpeta
 
-## Características principales del modelo relacional
+| Archivo | Tipo | Descripción |
+| :--- | :---: | :--- |
+| **`EvidenciaBaseDeDatos_Fase2.docx`** | Documento Word | Informe formal de base de datos para la entrega de Fase 2. |
+| **`schema.sql`** | Script DDL SQL | Script completo de creación de tablas, claves foráneas e índices (compatible con Supabase SQL Editor). |
+| **`Diagrama_Entidad_Relacion_DER.md`** | Modelo DER (Mermaid) | Diagrama Entidad-Relación completo con cardinalidades, claves foráneas y atributos. |
 
-- **Aislamiento Multi-Workspace (*Multi-Tenancy*):** Separación lógica estricta de repositorios, políticas, miembros, credenciales y hallazgos por espacio de trabajo.
-- **Deduplicación inteligente de hallazgos:** Uso de huella criptográfica (*fingerprint*) por regla, ruta y línea para evitar duplicar hallazgos entre ejecuciones sucesivas y mantener su trazabilidad histórica (`first_seen_at`, reaperturas y cierres).
-- **Seguridad de credenciales:** Tokens de acceso a repositorios privados cifrados en reposo y contraseñas almacenadas con *bcrypt*.
-- **Auditoría inmutable:** Registro de eventos de triaje, decisiones de IA (Pillow), cambios de severidad y aprobaciones de *bypass* en el *Security Gate*.
+*(El diccionario detallado de columnas y tipos de datos también se encuentra centralizado en `../Evidencias de documentación/Modelo de datos.docx`).*
+
+---
+
+## 2. Características del Modelo Relacional
+
+- **Multi-Tenancy por Workspace:** Todas las tablas de dominio (`repositories`, `scans`, `policies`, `audit_events`) se encuentran estrictamente particionadas lógicamente por `workspace_id`.
+- **Deduplicación Criptográfica:** La tabla `findings` utiliza un hash SHA-256 (`fingerprint_hash`) para evitar la duplicación de vulnerabilidades idénticas entre ejecuciones consecutivas.
+- **Auditoría Inmutable:** Registro de cambios de estado, aprobaciones de bypass y triaje en `audit_events`.
