@@ -162,6 +162,13 @@ Desarrollamos el proyecto bajo metodología **Ágil (Scrum apoyado con tableros 
 
 ### Flujo de arquitectura
 
+El siguiente diagrama ilustra el flujo operativo de **SSPILLOWY**, desde el evento de código en GitHub hasta la orquestación multi-motor, la evaluación de *Security Gates* y el gobierno de excepciones móvil:
+
+![Flujo de Arquitectura SSPILLOWY](./docs/flujo_arquitectura.png)
+
+<details>
+<summary><b>Ver diagrama de flujo complementario en texto (ASCII / Componentes)</b></summary>
+
 ```text
 [ GitHub Push / PR ] ──(Webhook HMAC)──► [ API FastAPI (SSPILLOWY Hub) ]
                                                   │
@@ -180,6 +187,7 @@ Desarrollamos el proyecto bajo metodología **Ágil (Scrum apoyado con tableros 
          Triaje, Fix Intel,             Aprueba o bloquea               Alertas Push +
          Dashboards y Reportes          el pipeline CI/CD               Bypass Biométrico
 ```
+</details>
 
 ---
 
@@ -191,35 +199,57 @@ Por eso incorporamos un módulo dedicado de **Observabilidad** tanto dentro de l
 - **Health Checks activos (`/health`):** Verificación en vivo de conectividad a PostgreSQL, disponibilidad de los binarios de escaneo (Semgrep, GitLeaks, Trivy, ZAP) y estado de la API.
 - **Métricas Prometheus (`/metrics`) y Grafana Cloud:** Exposición de contadores e histogramas de escaneos ejecutados, duración por motor, tasa de fallos y estado de los *Security Gates*.
 - **Trazabilidad y progreso en tiempo real:** Cada escaneo reporta su etapa exacta (`cloning`, `semgrep`, `gitleaks`, `trivy`, `owasp_zap`, `gate`) y registra cualquier anomalía para diagnóstico inmediato.
-- Las evidencias y capturas de esta capa están organizadas en [Fase 2/Evidencias_Proyecto/Observabilidad/](./Fase%202/Evidencias_Proyecto/Observabilidad/) y en [docs/Observabilidad/](./docs/Observabilidad/).
+- Las evidencias y capturas de esta capa están organizadas en [docs/Observabilidad/](./docs/Observabilidad/) y en [Evidencias de sistema / Base de datos](./Fase%202/Evidencias%20Proyecto/Evidencias%20de%20sistema/Base%20de%20datos/).
 
 ---
 
 ## Estructura del repositorio
 
-`	ext
+```text
 capstone_2026_duoc_alameda_grupo5/
-├── README.md
-├── docs/                                         # Documentación transversal del proyecto
-│   ├── Como_Levantar_El_Proyecto.md              # Guía paso a paso de instalación y ejecución local
-│   ├── Pruebas/                                  # Plan de pruebas QA, matriz, SonarQube y resultados
-│   └── Observabilidad/                           # Documentación y evidencias de monitoreo post-despliegue
-├── Fase 1/
+├── README.md                                     # Ficha general del proyecto y navegación principal
+├── docs/                                         # Documentación transversal de ingeniería
+│   ├── Como_Levantar_El_Proyecto.md              # Guía paso a paso de despliegue local (Docker / manual)
+│   ├── flujo_arquitectura.png                    # Diagrama visual de flujo de arquitectura
+│   ├── Observabilidad/                           # Telemetría en producción y métricas en Grafana Cloud
+│   │   ├── README.md
+│   │   └── grafana_supabase_dashboard.png
+│   └── Pruebas/                                  # Estrategia de QA, matriz de pruebas y SonarQube
+│       └── README.md
+├── Fase 1/                                       # Definición del proyecto, problemática y NABC
 │   ├── README.md
-│   ├── Evidencias Grupales/                      # Guía Fase 1, documento técnico inicial y PPT NABC
-│   └── Evidencias Individuales/                  # Autoevaluaciones (1.1, 1.3) y diarios (1.2)
-├── Fase 2/
+│   ├── Evidencias Grupales/                      # Guía Fase 1, Documento Técnico inicial y PPT NABC
+│   └── Evidencias Individuales/                  # Autoevaluaciones (1.1, 1.3) y Diarios de reflexión (1.2)
+├── Fase 2/                                       # Desarrollo, metodología ágil, arquitectura y sistema
 │   ├── README.md
-│   ├── Evidencias Grupales/                      # Guía 2.4 completada y presentaciones de avance Fase 2
+│   ├── Evidencias Grupales/                      # Guía 2.4 completada y presentaciones de avance
 │   ├── Evidencias Individuales/                  # Diarios de reflexión (2.1) y autoevaluaciones (2.2)
-│   └── Evidencias Proyecto/                      # Evidencias técnicas, ágiles y operativas de SSPILLOWY
+│   └── Evidencias Proyecto/                      # Entregables técnicos formales de la Fase 2
 │       ├── README.md
-│       ├── Evidencias de documentación/          # Documentos 01 a 05, Modelo de datos, DoD y RNF
-│       ├── Evidencias de sistema/                # Capturas del Web Hub, Jira, Confluence y base de datos
-│       │   ├── Aplicación/
-│       │   └── Base de datos/
-│       └── Presentación Proyecto.pptx            # Presentación formal de la Fase 2
-└── Fase 3/
-    ├── Evidencias Grupales/                      # Carpeta para entrega final Fase 3
-    └── Evidencias Individuales/                  # Diarios y autoevaluaciones Fase 3
-`
+│       ├── Presentación Proyecto.pptx            # Presentación formal de la Fase 2
+│       ├── Evidencias de documentación/          # Informes formales en Word (.docx)
+│       │   ├── Documento 01 - Product Vision.docx
+│       │   ├── Documento 02 - Product Backlog.docx
+│       │   ├── Documento 03 - Sprint Backlog.docx
+│       │   ├── Documento 04 - Definition of Done.docx
+│       │   ├── Documento 05 - Documento de Diseño.docx
+│       │   ├── Manual de operación del panel.docx
+│       │   ├── Modelo de datos.docx
+│       │   ├── Requisitos no funcionales.docx
+│       │   └── Retrospectiva de la Fase 2.docx
+│       └── Evidencias de sistema/                # Evidencia técnica reproducible de software y datos
+│           ├── Aplicación/                       # Contenerización Docker y diagramas UML
+│           │   ├── Dockerfile
+│           │   ├── docker-compose.yml
+│           │   ├── Diagrama_UML_Arquitectura.md
+│           │   ├── flujo_arquitectura.png
+│           │   └── README.md
+│           └── Base de datos/                    # Persistencia en PostgreSQL 16 (Supabase)
+│               ├── schema.sql                    # Script DDL de las 22 tablas
+│               ├── Diagrama_Entidad_Relacion_DER.md
+│               ├── EvidenciaBaseDeDatos_Fase2.docx
+│               └── README.md
+└── Fase 3/                                       # Fase final de cierre y entrega definitiva
+    ├── Evidencias Grupales/                      # Próximas entregas grupales de Fase 3
+    └── Evidencias Individuales/                  # Próximas autoevaluaciones individuales de Fase 3
+```

@@ -4,7 +4,13 @@ Este documento contiene los diagramas de modelado **UML (Unified Modeling Langua
 
 ---
 
-## 1. Diagrama de Componentes de la Aplicación (UML Component Diagram)
+## 1. Flujo de Arquitectura General del Sistema
+
+![Flujo de Arquitectura](./flujo_arquitectura.png)
+
+---
+
+## 2. Diagrama de Componentes de la Aplicación (UML Component Diagram)
 
 Muestra la interacción desacoplada entre el cliente web (React), la aplicación móvil (Flutter), la API Gateway en FastAPI, los motores de seguridad en Docker y el almacenamiento persistente.
 
@@ -53,7 +59,7 @@ graph TD
 
 ---
 
-## 2. Diagrama de Clases UML del Dominio Central (UML Class Diagram)
+## 3. Diagrama de Clases UML del Dominio Central (UML Class Diagram)
 
 Modela las entidades y relaciones principales del núcleo de seguridad y gobernanza en el backend (`apps/api/models.py`):
 
@@ -145,7 +151,7 @@ classDiagram
 
 ---
 
-## 3. Diagrama de Secuencia UML (Security Gate en CI/CD con Bypass Móvil)
+## 4. Diagrama de Secuencia UML (Security Gate en CI/CD con Bypass Móvil)
 
 ```mermaid
 sequenceDiagram
