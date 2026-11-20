@@ -197,7 +197,7 @@ Por eso incorporamos un módulo dedicado de **Observabilidad** tanto dentro de l
 
 ## Estructura del repositorio
 
-```text
+`	ext
 capstone_2026_duoc_alameda_grupo5/
 ├── README.md
 ├── docs/                                         # Documentación transversal del proyecto
@@ -206,19 +206,20 @@ capstone_2026_duoc_alameda_grupo5/
 │   └── Observabilidad/                           # Documentación y evidencias de monitoreo post-despliegue
 ├── Fase 1/
 │   ├── README.md
-│   ├── Evidencias_Grupales/                      # Guía Fase 1, documento técnico inicial y PPT NABC
-│   └── Evidencias_Individuales/                  # Autoevaluaciones (1.1, 1.3) y diarios (1.2)
-└── Fase 2/
-    ├── README.md
-    ├── Actas/                                    # Actas de control de avance y ceremonias Scrum
-    ├── Evidencias_Grupales/                      # Guía 2.4 completada y presentaciones de avance Fase 2
-    ├── Evidencias_Individuales/                  # Diarios de reflexión (2.1) y autoevaluaciones (2.2)
-    └── Evidencias_Proyecto/                      # Evidencias técnicas, ágiles y operativas de SSPILLOWY
-        ├── README.md
-        ├── Documentacion/                        # Documento técnico y diccionario de datos
-        ├── Version_Agil/                         # Product Vision, Backlog en Jira, Sprints, DoD y Confluence
-        ├── Observabilidad/                       # Evidencias de observabilidad, métricas y monitoreo en vivo
-        └── Sistema/
-            ├── Aplicacion/                       # Capturas del Hub web, Jira y Confluence
-            └── Base_de_datos/                    # Esquema y diccionario de datos PostgreSQL
-```
+│   ├── Evidencias Grupales/                      # Guía Fase 1, documento técnico inicial y PPT NABC
+│   └── Evidencias Individuales/                  # Autoevaluaciones (1.1, 1.3) y diarios (1.2)
+├── Fase 2/
+│   ├── README.md
+│   ├── Evidencias Grupales/                      # Guía 2.4 completada y presentaciones de avance Fase 2
+│   ├── Evidencias Individuales/                  # Diarios de reflexión (2.1) y autoevaluaciones (2.2)
+│   └── Evidencias Proyecto/                      # Evidencias técnicas, ágiles y operativas de SSPILLOWY
+│       ├── README.md
+│       ├── Evidencias de documentación/          # Documentos 01 a 05, Modelo de datos, DoD y RNF
+│       ├── Evidencias de sistema/                # Capturas del Web Hub, Jira, Confluence y base de datos
+│       │   ├── Aplicación/
+│       │   └── Base de datos/
+│       └── Presentación Proyecto.pptx            # Presentación formal de la Fase 2
+└── Fase 3/
+    ├── Evidencias Grupales/                      # Carpeta para entrega final Fase 3
+    └── Evidencias Individuales/                  # Diarios y autoevaluaciones Fase 3
+`

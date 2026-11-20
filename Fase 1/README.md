@@ -1,13 +1,13 @@
 # Fase 1 — Definición y Diseño del Proyecto APT
 
-En esta carpeta organizo todas nuestras evidencias correspondientes a la **Fase 1 (Definición y Diseño de Proyecto APT)** de **SSPILLOWY**.
+En esta carpeta se organizan todas nuestras evidencias correspondientes a la **Fase 1 (Definición y Diseño de Proyecto APT)** de **SSPILLOWY**.
 
 ## Estructura de la Fase 1
 
 | Carpeta | Contenido |
 | --- | --- |
-| [Evidencias_Grupales](./Evidencias_Grupales/) | Guía del estudiante Fase 1 completada, documento técnico inicial de arquitectura y presentación NABC. |
-| [Evidencias_Individuales](./Evidencias_Individuales/) | Autoevaluación de competencias (`1.1`), Diario de reflexión (`1.2`) y Autoevaluación de definición del proyecto (`1.3`) de cada integrante. |
+| [Evidencias Grupales](./Evidencias%20Grupales/) | Guía del estudiante Fase 1 completada, documento técnico inicial de arquitectura y presentación NABC. |
+| [Evidencias Individuales](./Evidencias%20Individuales/) | Autoevaluación de competencias (`1.1`), Diario de reflexión (`1.2`) y Autoevaluación de definición del proyecto (`1.3`) de cada integrante. |
 
 ## Enlaces del proyecto
 

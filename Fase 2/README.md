@@ -1,15 +1,14 @@
 # Fase 2 — Desarrollo, Metodología Ágil y Avance del Proyecto
 
-En esta carpeta concentro todas las evidencias de construcción, seguimiento ágil, pruebas y operación real de **SSPILLOWY** correspondientes a la **Fase 2**.
+En esta carpeta se concentran todas las evidencias de construcción, seguimiento ágil, pruebas y operación real de **SSPILLOWY** correspondientes a la **Fase 2**.
 
 ## Estructura de la Fase 2
 
 | Carpeta | Contenido |
 | --- | --- |
-| [Actas](./Actas/) | Actas de control de avance, acuerdos de reuniones y retrospectivas de sprint. |
-| [Evidencias_Grupales](./Evidencias_Grupales/) | Guía del estudiante `2.4` (Desarrollo del Proyecto APT) e informes/presentaciones de avance. |
-| [Evidencias_Individuales](./Evidencias_Individuales/) | Diarios de reflexión (`2.1`) y autoevaluaciones de avance (`2.2`) de cada integrante. |
-| [Evidencias_Proyecto](./Evidencias_Proyecto/) | Documentación técnica, artefactos de nuestra metodología Ágil (Jira y Confluence), capturas del sistema, base de datos y **Observabilidad**. |
+| [Evidencias Grupales](./Evidencias%20Grupales/) | Guía del estudiante `2.4` (Desarrollo del Proyecto APT) y presentaciones de avance de la Fase 2. |
+| [Evidencias Individuales](./Evidencias%20Individuales/) | Diarios de reflexión (`2.1`) y autoevaluaciones de avance (`2.2`) de cada integrante. |
+| [Evidencias Proyecto](./Evidencias%20Proyecto/) | Documentación técnica, artefactos ágiles (Jira y Confluence), capturas del sistema, base de datos y observabilidad. |
 
 ## Enlaces al sistema en producción y código Open Source
 
