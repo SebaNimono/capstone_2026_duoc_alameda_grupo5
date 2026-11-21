@@ -218,7 +218,11 @@ capstone_2026_duoc_alameda_grupo5/
 │       └── README.md
 ├── Fase 1/                                       # Definición del proyecto, problemática y NABC
 │   ├── README.md
-│   ├── Evidencias Grupales/                      # Guía Fase 1, Documento Técnico inicial y PPT NABC
+│   ├── Evidencias Grupales/                      # Guía 1.5, 1.4 Formativa, Documento Técnico inicial y PPT NABC
+│   │   ├── 1.4_APT122_FormativaFase1.docx
+│   │   ├── 1.5_GuiaEstudiante_Fase 1_Definicion Proyecto APT (Español).docx
+│   │   ├── SSPILLOWY_Documento_Tecnico.docx
+│   │   └── SSPILLOWY_NABC_completo.pptx
 │   └── Evidencias Individuales/                  # Autoevaluaciones (1.1, 1.3) y Diarios de reflexión (1.2)
 ├── Fase 2/                                       # Desarrollo, metodología ágil, arquitectura y sistema
 │   ├── README.md
@@ -238,9 +242,10 @@ capstone_2026_duoc_alameda_grupo5/
 │       │   ├── Requisitos no funcionales.docx
 │       │   └── Retrospectiva de la Fase 2.docx
 │       └── Evidencias de sistema/                # Evidencia técnica reproducible de software y datos
-│           ├── Aplicación/                       # Contenerización Docker y diagramas UML
-│           │   ├── Dockerfile
-│           │   ├── docker-compose.yml
+│           ├── Aplicación/                       # Contenerización Docker (4 de 4) y diagramas UML
+│           │   ├── .env.example                  # Plantilla de variables de entorno
+│           │   ├── Dockerfile                    # Contenedor de escáneres y API
+│           │   ├── docker-compose.yml            # Orquestación de servicios
 │           │   ├── Diagrama_UML_Arquitectura.md
 │           │   ├── flujo_arquitectura.png
 │           │   └── README.md

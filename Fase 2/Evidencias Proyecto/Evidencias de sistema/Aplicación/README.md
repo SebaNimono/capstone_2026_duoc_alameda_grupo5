@@ -10,6 +10,7 @@ La plataforma está diseñada para ejecutarse de forma reproducible y aislada me
 
 - **`Dockerfile`:** Imagen optimizada en `python:3.12-slim` que instala y ejecuta las herramientas de seguridad nativas en Linux (**Semgrep**, **GitLeaks** y **Trivy**), creando un usuario no privilegiado (`appuser`) y exponiendo health checks activos en `/health`.
 - **`docker-compose.yml`:** Orquestación completa de los servicios:
+- **`.env.example`:** Plantilla de variables de entorno para configuración segura del entorno Docker (base de datos, secretos JWT, webhooks HMAC).
   - `sspillowy_api`: API FastAPI con recarga en vivo y orquestación multi-motor.
   - `sspillowy_postgres`: Motor de base de datos relacional PostgreSQL 16 con volumen persistente.
   - `sspillowy_redis`: Servicio en memoria para colas de trabajo asíncronas y caché.
