@@ -251,5 +251,8 @@ capstone_2026_duoc_alameda_grupo5/
 │               └── README.md
 └── Fase 3/                                       # Fase final de cierre y entrega definitiva
     ├── Evidencias Grupales/                      # Próximas entregas grupales de Fase 3
-    └── Evidencias Individuales/                  # Próximas autoevaluaciones individuales de Fase 3
+    └── Evidencias Individuales/                  # Diarios de reflexión y autoevaluaciones Fase 3
+        ├── README.md
+        ├── Hernandez_Benjamin_3.1_APT122_DiarioReflexionFase3.docx
+        └── Tralma_Sebastian_3.1_APT122_DiarioReflexionFase3.docx
 ```
