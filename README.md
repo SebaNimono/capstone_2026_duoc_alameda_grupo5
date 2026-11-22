@@ -211,9 +211,12 @@ capstone_2026_duoc_alameda_grupo5/
 ├── docs/                                         # Documentación transversal de ingeniería
 │   ├── Como_Levantar_El_Proyecto.md              # Guía paso a paso de despliegue local (Docker / manual)
 │   ├── flujo_arquitectura.png                    # Diagrama visual de flujo de arquitectura
-│   ├── Observabilidad/                           # Telemetría en producción y métricas en Grafana Cloud
+│   ├── Observabilidad/                           # Telemetría en producción y métricas en Grafana Cloud (4 paneles)
 │   │   ├── README.md
-│   │   └── grafana_supabase_dashboard.png
+│   │   ├── 01_grafana_cpu_mem_disk.png
+│   │   ├── 02_grafana_network_connections_postgres.png
+│   │   ├── 03_grafana_queries_transactions_status.png
+│   │   └── 04_grafana_bgwriter_memory_stack.png
 │   └── Pruebas/                                  # Estrategia de QA, matriz de pruebas y SonarQube
 │       └── README.md
 ├── Fase 1/                                       # Definición del proyecto, problemática y NABC
