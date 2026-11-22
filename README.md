@@ -226,7 +226,12 @@ capstone_2026_duoc_alameda_grupo5/
 │   └── Evidencias Individuales/                  # Autoevaluaciones (1.1, 1.3) y Diarios de reflexión (1.2)
 ├── Fase 2/                                       # Desarrollo, metodología ágil, arquitectura y sistema
 │   ├── README.md
-│   ├── Evidencias Grupales/                      # Guía 2.4 completada y presentaciones de avance
+│   ├── Evidencias Grupales/                      # Guía 2.4 de avance, Guía 2.6 Informe Final y presentaciones
+│   │   ├── 2.4_GuiaEstudiante_Fase2_SSPILLOWY_Completada.docx
+│   │   ├── 2.6_GuiaEstudiante_Fase 2_Informe Final Proyecto APT (Español).docx
+│   │   ├── Avance_Proyecto_APT.pptx
+│   │   ├── Presentacion_Proyecto_SSPILLOWY_Fase2.pptx
+│   │   └── SSPILLOWY — Presentació N2.pptx
 │   ├── Evidencias Individuales/                  # Diarios de reflexión (2.1) y autoevaluaciones (2.2)
 │   └── Evidencias Proyecto/                      # Entregables técnicos formales de la Fase 2
 │       ├── README.md
