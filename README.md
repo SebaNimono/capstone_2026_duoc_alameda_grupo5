@@ -217,8 +217,15 @@ capstone_2026_duoc_alameda_grupo5/
 │   │   ├── 02_grafana_network_connections_postgres.png
 │   │   ├── 03_grafana_queries_transactions_status.png
 │   │   └── 04_grafana_bgwriter_memory_stack.png
-│   └── Pruebas/                                  # Estrategia de QA, matriz de pruebas y SonarQube
-│       └── README.md
+│   └── Pruebas/                                  # Informes QA, SonarQube, JMeter, Postman, Matriz y Tests
+│       ├── README.md
+│       ├── Informe_QA_SonarQube_SSPILLOWY.docx
+│       ├── Informe_Pruebas_Estres_JMeter_SSPILLOWY.docx
+│       ├── Informe_QA_API_Postman_SSPILLOWY.docx
+│       ├── Informe_QA_Mobile_Android_SSPILLOWY.docx
+│       ├── Matriz_Casos_Prueba_Fase2.xlsx
+│       └── tests/
+│           └── test_security_audit.py
 ├── Fase 1/                                       # Definición del proyecto, problemática y NABC
 │   ├── README.md
 │   ├── Evidencias Grupales/                      # Guía 1.5, 1.4 Formativa, Documento Técnico inicial y PPT NABC
@@ -263,7 +270,9 @@ capstone_2026_duoc_alameda_grupo5/
 │               ├── EvidenciaBaseDeDatos_Fase2.docx
 │               └── README.md
 └── Fase 3/                                       # Fase final de cierre y entrega definitiva
-    ├── Evidencias Grupales/                      # Próximas entregas grupales de Fase 3
+    ├── Evidencias Grupales/                      # Entrega grupal final de Fase 3
+    │   ├── README.md
+    │   └── Presentación Final del proyecto (Español).pptx
     └── Evidencias Individuales/                  # Diarios de reflexión y autoevaluaciones Fase 3
         ├── README.md
         ├── Hernandez_Benjamin_3.1_APT122_DiarioReflexionFase3.docx

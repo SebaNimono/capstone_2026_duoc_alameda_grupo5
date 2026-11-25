@@ -1,17 +1,27 @@
 # Pruebas y Aseguramiento de Calidad (QA) — SSPILLOWY
 
-Aquí dejo toda nuestra documentación de pruebas, planes de validación funcional, análisis estático de calidad con **SonarQube** y resultados de ejecución por iteración.
+En esta carpeta se consolidan los informes de pruebas funcionales, pruebas de API, pruebas de rendimiento/estrés, análisis estático de código (**SonarQube Cloud**), la matriz de casos de prueba y las pruebas automatizadas de regresión del backend de **SSPILLOWY**.
 
-## Qué va en esta carpeta
+---
 
-- **Matriz y Plan de Pruebas (`Pruebas.docx` / `.xlsx`):** Casos de prueba diseñados para validar el registro de repositorios, ejecución de los 4 motores (Semgrep, GitLeaks, Trivy, OWASP ZAP), evaluación del *Security Gate*, triaje de falsos positivos y flujo móvil en **Pulse**.
-- **Resultados de Pruebas por Entrega:** Reportes de pruebas ejecutadas, hallazgos corregidos y pruebas de regresión.
-- **Evidencias de SonarQube y Cobertura (`SSPIL-57`):** Capturas y reportes de deuda técnica, *code smells*, cobertura y *Quality Gate* de SonarQube.
+## 1. Documentos y Evidencias en esta Carpeta
 
-## Imágenes y evidencias de QA
+| Archivo | Tipo de Prueba | Herramienta | Resumen de Resultados |
+| :--- | :--- | :--- | :--- |
+| [`Informe_QA_SonarQube_SSPILLOWY.docx`](./Informe_QA_SonarQube_SSPILLOWY.docx) | Análisis estático de calidad y seguridad | SonarQube Cloud | Quality Gate **Passed** (~48k LOC, Mantenibilidad **A**, Duplicación **2,1%**, Security Hotspots **0**, plan de acción sobre deuda acumulada). |
+| [`Informe_Pruebas_Estres_JMeter_SSPILLOWY.docx`](./Informe_Pruebas_Estres_JMeter_SSPILLOWY.docx) | Pruebas de rendimiento y estrés | Apache JMeter 5.6.3 | Línea base (1 usuario, 2.000 muestras): **0,00% error**, 838 ms promedio. Carga (50 usuarios simultáneos, 6.071 muestras): 37,5 req/s, identificación de punto de quiebre (13,38% HTTP 500). |
+| [`Informe_QA_API_Postman_SSPILLOWY.docx`](./Informe_QA_API_Postman_SSPILLOWY.docx) | Testing funcional de API REST | Postman + DevTools | 5 endpoints evaluados, 10 casos (**90% aprobados**): creación de escaneos y repositorios (`201`), control de sesión (`401`), manejo `404`, notificaciones y detección de bug CORS `OPTIONS`. |
+| [`Informe_QA_Mobile_Android_SSPILLOWY.docx`](./Informe_QA_Mobile_Android_SSPILLOWY.docx) | Pruebas funcionales Mobile (Android) | BrowserStack App Live (Galaxy S22 Ultra) | 10 casos (**80% aprobados**) con 2 cuentas distintas; validación de login, incidentes, aprobación y registro; detección de 2 bugs reproducibles (perfil mock y persistencia de sesión). |
+| [`Matriz_Casos_Prueba_Fase2.xlsx`](./Matriz_Casos_Prueba_Fase2.xlsx) | Matriz de casos de prueba funcionales | Excel / QA Manual | **59 casos de prueba** (34 Web + 25 Pulse) cubriendo Login, Repositorios, Escaneos, Hallazgos, Security Gates, Excepciones y Móvil. |
+| [`tests/test_security_audit.py`](./tests/test_security_audit.py) | Pruebas automatizadas en código | Python `unittest` / `pytest` | Suite de regresión de seguridad para backend FastAPI (auditoría, bypass de Security Gates, Fix Intelligence y aislamiento de workspaces). |
 
-> **[Imagen de matriz de casos de prueba ejecutados por QA]**
+---
 
-> **[Imagen de resultado de análisis de calidad en SonarQube (`SSPIL-57`)]**
+## 2. Ejecución de las Pruebas Automatizadas del Backend
 
-> **[Imagen de validación del flujo de notificaciones push y biometría en Pulse (`SSPIL-59`)]**
+Desde el repositorio del código fuente ([`SebaNimono/sspillowy`](https://github.com/SebaNimono/sspillowy)):
+
+```bash
+cd apps/api
+python -m unittest tests/test_security_audit.py -v
+```
